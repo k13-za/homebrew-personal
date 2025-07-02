@@ -12,12 +12,12 @@ cask "postgres" do
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v2.8.2/Postgres-2.8.2-17.dmg"
   sha256 "b52fa878960bdc345baeb6aa0ba9d6a1f2de5f7979014cc42e1a0cc633c31bf2"
 
-  app "Postgres"
+  app "Postgres.app"
 
   uninstall quit: "com.postgres.app"
 
   zap trash: [
-    "~/Library/Application Support/Postgres",
+    "~/Library/Application Support/Postgres.app",
     "~/Library/Caches/com.postgres",
     "~/Library/Preferences/com.postgres.plist",
     "~/Library/Saved Application State/com.postgres.savedState",
