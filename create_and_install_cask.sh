@@ -76,7 +76,6 @@ echo "Determined tap path: ${TAP_PATH}"
 # Generate cask content
 CASK_CONTENT="cask \"${CASK_TOKEN}\" do
   version \"${VERSION}\"
-  sha256 \"no_check\" # This will be replaced by architecture-specific shas if both are provided
 
   desc \"${DESCRIPTION}\"
   homepage \"${HOMEPAGE}\"
@@ -89,6 +88,8 @@ CASK_CONTENT="cask \"${CASK_TOKEN}\" do
 
 if [ -n "$INTEL_URL" ] && [ -n "$INTEL_SHA256" ]; then
     CASK_CONTENT+="
+  sha256 \"no_check\" # This will be replaced by architecture-specific shas if both are provided
+
   on_arm do
     url \"${ARM_URL}\"
     sha256 \"${ARM_SHA256}\"
@@ -107,7 +108,7 @@ else
 fi
 
 CASK_CONTENT+="
-  app \"${APP_NAME}.app\"
+  app \"${APP_NAME}\"
 
   uninstall quit: \"${QUIT_ID}\"
 
