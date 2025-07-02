@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 set -u
-
+# THIS IS IN ALPHA USE AT YOUR OWN RISK
 # Function to display usage
 usage() {
     echo "Usage: $0 --app-name \"App Name\" --cask-token \"cask-token\" --version \"1.0.0\" \\"
