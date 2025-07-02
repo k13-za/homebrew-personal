@@ -1,6 +1,5 @@
 cask "postgres" do
   version "2.8.2-17"
-  sha256 "no_check" # This will be replaced by architecture-specific shas if both are provided
 
   desc "Postgres.app is a full-featured PostgreSQL installation packaged as a standard Mac app."
   homepage "https://postgresapp.com"
